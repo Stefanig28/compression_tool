@@ -1,6 +1,26 @@
 import pathlib
+from typing import Union
 
-def char_counter(content: str):
+
+class HuffmanTree:
+    def __init__(
+        self,
+        weight: int,
+        left: Union["HuffmanTree", None],
+        right: Union["HuffmanTree", None],
+        key: str | None,
+    ):
+        self.key = key
+        self.weight = weight
+        self.left = left
+        self.right = right
+
+
+def build_huffman_tree(frequencies: dict[str, int]) -> HuffmanTree:
+    raise NotImplementedError
+
+
+def char_counter(content: str) -> dict[str, int]:
     frequency = {}
 
     for char in content:
@@ -18,8 +38,6 @@ def _cli():
 
     print(char_counter(args.file.read_text(encoding="utf-8")))
 
+
 if __name__ == "__main__":
     _cli()
-
-
-
