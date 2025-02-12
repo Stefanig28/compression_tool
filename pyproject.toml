@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "compression-tool"
+name = "compression_tool"
 version = "0.1.0"
 description = ""
 authors = ["Stefani <stefanigtorres@gmail.com>"]
@@ -17,3 +17,6 @@ pytest = "^8.3.4"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+compression_tool = "compression_tool.main:_cli"
